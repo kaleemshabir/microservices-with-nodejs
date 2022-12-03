@@ -19,8 +19,8 @@ router.post('/', async(req, res) => {
 
         
     } catch (error) {
-        // res.status(500).send('Internal server error!');
         console.log("error:", error);
+        res.status(500).send('Internal server error!');
     }
 });
 
@@ -39,13 +39,14 @@ router.get('/:id', async(req, res) => {
 
                 }
 
-                axios.get(`http://localhost:4000/product/${order.productId}`).then(response => {
+                axios.get(`http://localhost:3000/product/${order.productId}`).then(response => {
                     orderObject.ProductName= response.data.productName,
-                    orderObject.ProductDetails = response.data.ProductDetails
+                    orderObject.ProductDetails = response.data.productDetails
 
                     console.log('in order', orderObject);
+                    res.json(orderObject);
                 })
-                res.json(orderObject);
+                
                 })
             }else {
                 res.status(400).send('Order not found!')

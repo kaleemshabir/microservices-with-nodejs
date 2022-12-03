@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "customer": "nodemon ./Customer",
+    "order": "nodemon ./Order",
+    "product": "nodemon ./Product"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +15,8 @@
     "axios": "^1.2.0",
     "express": "^4.18.2",
     "mongoose": "^6.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
