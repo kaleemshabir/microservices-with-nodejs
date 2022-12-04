@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "61e55962-e0fd-44ab-8139-3cdfcb49e505",
+		"name": "EcommerceMicroserviceNodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11194529"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "SaveCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"customerId\":\"123\",\n\"customerName\": \"John Doe\",\n    \"customerAge\":\"25\",\n    \"customerAddress\":\"Gulberg II, Lahore\"\n   \n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"customerId\":\"123\",\n\"customerName\": \"John Doe\",\n    \"customerAge\":\"25\",\n    \"customerAddress\":\"Gulberg II, Lahore\"\n   \n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/customer/638b1f29225abfcd88b0bdd9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"customer",
+								"638b1f29225abfcd88b0bdd9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "SaveProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"productId\":\"321\",\n\"productName\": \"TIRO TRACK PANTS\",\n    \"productDetails\":\"Feel good. Look good. Rooted in soccer heritage, the Tiro 21 Track Pants perform on and off the pitch. Made to move, they keep you confident with moisture-absorbing AEROREADY. They also contain recycled materials, another small step in adidas' efforts to help end plastic waste.\"\n \n   \n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"customerId\":\"123\",\n\"customerName\": \"John Doe\",\n    \"customerAge\":\"25\",\n    \"customerAddress\":\"Gulberg II, Lahore\"\n   \n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product/638b220ced36c4157730f5c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"638b220ced36c4157730f5c7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "SaveOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"productId\":\"638b220ced36c4157730f5c7\",\n\"customerId\":\"638b1f29225abfcd88b0bdd9\"\n\n \n   \n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/order/638b232e506df365b8a0168d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"order",
+								"638b232e506df365b8a0168d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
